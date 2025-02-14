@@ -29,13 +29,12 @@ function createHeartEffect(duration = 5000, interval = 200) {
         heart.className = 'heart';
         heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
 
-        // Random positioning & size
         heart.style.left = Math.random() * window.innerWidth + 'px';
         heart.style.fontSize = Math.random() * 20 + 20 + 'px';
 
         document.body.appendChild(heart);
 
-        // Remove after animation completes
+
         setTimeout(() => heart.remove(), duration);
     }, interval);
 
